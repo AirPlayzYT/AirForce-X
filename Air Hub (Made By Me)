@@ -1,1 +1,1 @@
-
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AirPlayzYT/Yes/gh-pages/Air%20Hub%20Workspace.lua", true))()
