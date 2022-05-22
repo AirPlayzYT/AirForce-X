@@ -1,4 +1,3 @@
-
 local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
 local Window = Library.CreateLib("Bedwars Air V1", "BloodTheme")
 
@@ -11,6 +10,7 @@ local Tab2 = Window:NewTab("Credits")
 local Tab2Section = Tab2:NewSection("Air")
 
 -- Buttons
+
 Tab1Section:NewButton("Vape V4", "Loads Vape Script", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
 end)
@@ -30,6 +30,10 @@ end)
 
 Tab1Section:NewButton("Inf Yield", "Loads Inf Yield", function()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+end)
+
+Tab1Section:NewButton("Rekt Sky", "Loads Rekt Sky", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/joeengo/Future/main/loadstring.lua', true))()
 end)
 
 Tab2Section:NewButton("Credits", "Credits", function()
