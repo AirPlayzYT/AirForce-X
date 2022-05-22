@@ -36,8 +36,8 @@ Tab1Section:NewButton("Rekt Sky", "Loads Rekt Sky", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/joeengo/Future/main/loadstring.lua', true))()
 end)
 
-Tab1Section:NewButton("Moonlight", "Loads Moonlight", function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/8pmX8/moonlight.cool/main/mlobfuscated.lua'))();
+Tab1Section:NewButton("Lightbed", "Loads Lightbed", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AirPlayzYT/Yes/gh-pages/LIGHTBED%20BETA(not%20mine).lua", true))()
 end)
 
 Tab2Section:NewButton("Credits", "Credits", function()
