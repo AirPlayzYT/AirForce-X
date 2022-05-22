@@ -1,3 +1,4 @@
+-
 
 local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
 local Window = Library.CreateLib("Bedwars Air V1", "BloodTheme")
@@ -45,3 +46,5 @@ game.StarterGui:SetCore("SendNotification", {
     Duration = 30;
 })
 end)
+
+-
