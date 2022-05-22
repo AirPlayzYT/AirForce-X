@@ -36,6 +36,10 @@ Tab1Section:NewButton("Rekt Sky", "Loads Rekt Sky", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/joeengo/Future/main/loadstring.lua', true))()
 end)
 
+Tab1Section:NewButton("Moonlight", "Loads Moonlight", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/8pmX8/moonlight.cool/main/mlobfuscated.lua'))();
+end)
+
 Tab2Section:NewButton("Credits", "Credits", function()
 game.StarterGui:SetCore("SendNotification", {
     Title = "Bedwars OP";
