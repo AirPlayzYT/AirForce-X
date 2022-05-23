@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AirPlayzYT/Yes/main/Sunlight%20Workspace.lua", true))()
