@@ -10,8 +10,7 @@ local Tab2 = Window:NewTab("Other")
 local Tab2Section = Tab2:NewSection("Other")
 
 local Tab3 = Window:NewTab("Credits")
-local Tab3Section = Tab3:NewSection("Air")
-local Tab3Section = Tab3:NewSection("Who Inspired Me")
+local Tab3Section = Tab3:NewSection("Credits
 
 -- Buttons
 
@@ -59,12 +58,5 @@ game.StarterGui:SetCore("SendNotification", {
     Title = "Enjoy";
     Text = "Don't Forget to Subscribe to AirScripts"; -- what the text says (ofc)
     Duration = 30;
-})
-
-Tab3Section:NewButton("Who Inspired Me", "Who Inspired Me", function()
-game.StarterGui:SetCore("SendNotification", {
-	Title = "Who Inspired Me";
-	Text = "JN HH Gaming"; -- what the text says
-	Duration = 30;
 })
 end)
