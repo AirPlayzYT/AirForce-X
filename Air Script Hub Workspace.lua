@@ -11,8 +11,8 @@ b:Label("Yes",{
     
 }) 
 
-b:Button("Bedwars Air",function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/AirPlayzYT/Yes/gh-pages/Bedwars%20Air%20Workspace.lua", true))()
+b:Button("Bedwars Air", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AirPlayzYT/Yes/main/Bedwars%20Air%20Workspace.lua", true))()
 end)
 
 b:DestroyGui()
