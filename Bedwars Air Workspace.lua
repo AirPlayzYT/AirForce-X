@@ -10,7 +10,7 @@ local Tab2 = Window:NewTab("Other")
 local Tab2Section = Tab2:NewSection("Other")
 
 local Tab3 = Window:NewTab("Credits")
-local Tab3Section = Tab3:NewSection("Credits
+local Tab3Section = Tab3:NewSection("Credits")
 
 -- Buttons
 
@@ -43,7 +43,7 @@ Tab1Section:NewButton("Lightbed", "Loads Lightbed", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/AirPlayzYT/Yes/gh-pages/LIGHTBED%20BETA(not%20mine).lua", true))()
 end)
 
-Tab2Section:NewButton("Rejoin", "Rejoind The Game", function()
+Tab2Section:NewButton("Rejoin", "Rejoins The Game", function()
 loadstring(game:HttpGet("https://pastebin.com/raw/1gtVMUz3"))()
 end)
 
