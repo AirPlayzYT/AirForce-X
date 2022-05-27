@@ -43,6 +43,10 @@ Tab1Section:NewButton("Lightbed", "Loads Lightbed", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/AirPlayzYT/Yes/gh-pages/LIGHTBED%20BETA(not%20mine).lua", true))()
 end)
 
+Tab2Section:NewButton("AutoToxic", "Makes You Automatically Toxic", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/BigCoolboy/Main/main/Compliment'))()
+end)
+
 Tab2Section:NewButton("Rejoin", "Rejoins The Game", function()
 loadstring(game:HttpGet("https://pastebin.com/raw/1gtVMUz3"))()
 end)
