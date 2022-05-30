@@ -1,1 +1,1 @@
-https://raw.githubusercontent.com/AirPlayzYT/Yes/main/LIGHTBED%20BETA(not%20mine).lua
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AirPlayzYT/AirForce-X/main/LIGHTBED%20BETA(not%20mine).lua", true))()
