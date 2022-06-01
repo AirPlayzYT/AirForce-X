@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
-local Window = Library.CreateLib("Bedwars Air V3", "BloodTheme")
+local Window = Library.CreateLib("Bedwars AirForce-X V3", "BloodTheme")
 
 -- Tab
 
@@ -66,13 +66,13 @@ end)
 Tab3Section:NewButton("Credits", "Credits", function()
 game.StarterGui:SetCore("SendNotification", {
     Title = "Bedwars OP";
-    Text = "Made by Air Some scripts made by JN HH Gaming"; -- what the text says (ofc)
+    Text = "Made by Air"; -- what the text says (ofc)
     Duration = 30;
 })
 wait(1)
 game.StarterGui:SetCore("SendNotification", {
     Title = "Enjoy";
-    Text = "Don't Forget to Subscribe to AirScripts and JN HH Gaming"; -- what the text says (ofc)
+    Text = "Don't Forget to Subscribe to A1rPlayz"; -- what the text says (ofc)
     Duration = 30;
 })
 end)
