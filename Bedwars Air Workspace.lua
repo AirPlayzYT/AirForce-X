@@ -678,10 +678,6 @@ Tab2Section:NewButton("Rekt Sky", "Loads Rekt Sky", function()ÿ
 loadstring(game:HttpGet('https://raw.githubusercontent.com/joeengo/Future/main/loadstring.lua', true))()
 end)
 
-Tab2Section:NewButton("Hitbox Expander", "Expands the hitbox", function()
-loadstring(game:HttpGet("http://gameovers.net/Scripts/Free/HitboxExpander/main.lua", true))()
-end)
-
 Tab2Section:NewButton("Rejoin", "Rejoins The Game", function()
 loadstring(game:HttpGet("https://pastebin.com/raw/1gtVMUz3"))()
 end)
@@ -816,3 +812,402 @@ if lplr.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
     end
 
 end)
+
+        }
+    }
+
+    game:GetService("ReplicatedStorage").rbxts_include.node_modules.net.out._NetManaged.DamageBlock:InvokeServer(unpack(args))
+end
+
+local function getItem(itemName)
+	for i5, v5 in pairs(getinv(lplr)["items"]) do
+		if v5["itemType"] == itemName then
+			return v5, i5
+		end
+	end
+	return nil
+end
+    else
+        print("Toggle Off")
+    end
+end)
+
+--chat spammer
+
+Tab5Section:NewToggle("chat spammer", "ayo", function(state)
+    if state then        
+while true do wait(0) 
+
+local A_1 = "Air on top" local A_2 = "All" 
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) end
+    else
+        print("Toggle Off")
+    end
+end)
+
+			end;
+		end;
+		if thing and reason and offensive then
+			lib:report(player, thing, reason, offensive);
+		end;
+	end;
+end);
+
+if not success then
+	error(error);
+end;
+
+for i, plr in pairs(game.Players:GetPlayers()) do
+	if plr ~= game.Players.LocalPlayer then
+		plr.Chatted:Connect(function(msg)
+			(getgenv()).autoreport.Message = msg;
+			handler(plr, msg);
+		end);
+	end;
+end;
+game.Players.PlayerAdded:Connect(function(plr)
+	if plr ~= game.Players.LocalPlayer then
+		plr.Chatted:Connect(function(msg)
+			(getgenv()).autoreport.Message = msg;
+			handler(plr, msg);
+		end);
+	end;
+end);
+
+(
+
+--sprint
+
+Tab5Section:NewToggle("Sprint", "Automatically on your sprint", function(state) 
+         if state then 
+                 BindToStepped("Sprint", 1, function() 
+                         if SprintCont.sprinting == false then 
+                                 SprintCont:startSprinting() 
+                         end 
+                 end) 
+         else 
+                 UnbindFromStepped("Sprint") 
+                 SprintCont:stopSprinting() 
+         end 
+ end) 
+
+--damage return
+
+Tab5Section:NewToggle("damage return", "ToggleInfo", function(state)
+    if state then
+        
+local TS = game:GetService("TweenService")
+local Tinfo = TweenInfo.new(0.3, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut)
+
+local DamageEvent = game.ReplicatedStorage.DamageEvent --You can remove this line since it is actually unnecessary 
+local DamageBoard = game.ReplicatedStorage.DamageBoard
+
+local Red = Color3.fromRGB(255, 0, 0)
+local Green = Color3.fromRGB(95,111,64)
+
+
+
+game.Players.PlayerAdded:Connect(function(plr)
+	plr.CharacterAdded:Connect(function(char)
+		
+		local hum = char:WaitForChild("Humanoid")
+		local humH = hum.Health
+		
+		hum.HealthChanged:Connect(function(Health)
+			if Health < humH and Health > 0 then
+				
+				local Damage = math.floor(humH - Health)
+				print(Damage.." Damage was taken")
+				
+				local BoardClone = DamageBoard:Clone()
+				BoardClone:FindFirstChild("Damage").Text = Damage
+				
+				local maxH = hum.MaxHealth
+				BoardClone.Damage.TextColor3 = Green:lerp(Red, Damage / maxH)
+				
+				
+				BoardClone.Parent = char.HumanoidRootPart
+				BoardClone.Damage:TweenSize(UDim2.new(1,0,1,0), "InOut", "Quint", 0.3)
+			
+		                wait(0.3)
+				
+				local UIupTween = TS:Create(BoardClone, Tinfo, {StudsOffset = BoardClone.StudsOffset + Vector3.new(0,1,0)})
+				local textFade = TS:Create(BoardClone.Damage, Tinfo, {TextTransparency = 1})
+								
+				UIupTween:Play()
+				textFade:Play()
+				
+				game:GetService("Debris"):AddItem(BoardClone, 0.5)
+			end
+			humH = hum.Health
+		end)
+		
+	end)
+end)
+    else
+        print("Toggle Off")
+    end
+end)
+
+--anti cheat
+
+Tab5Section:NewToggle("Anti cheat", "removes some anticheats", function(state)
+    if state then
+        shared.enabled = w
+game:GetService("RunService").heartbeat:connect(function()
+if not shared.enabled then return end
+game:GetService("ReplicatedStorage").rbxts_include.node_modules.net.out._NetManaged.GroundHit:FireServer(workspace.Map.Blocks,1645488277.345853)
+wait()
+end)
+    else
+        print("Toggle Off")
+    end
+end)
+
+--hitbox
+
+Tab5Section:NewToggle("hitbox", "hitbox players", function(state)
+    if state then
+        _G.HeadSize = 23
+_G.Disabled = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.Disabled then
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+v.Character.HumanoidRootPart.Transparency = 0.8
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really blue")
+v.Character.HumanoidRootPart.Material = "Plastic"
+v.Character.HumanoidRootPart.CanCollide = false
+end)
+end
+end
+end
+end)
+    else
+        print("Toggle Off")
+    end
+end)
+
+--bednuker v2 fix
+
+Tab1Section:NewToggle("bednuker fix", "ToggleInfo", function(state)
+    if state then
+        function getclosebed()
+    for i,v in pairs(game:GetService("Workspace").Map.Blocks:GetChildren()) do
+        if v.Name == "bed" and v:FindFirstChild("Covers") then
+            local magcheck = (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v.Covers.Position).Magnitude
+            if magcheck <= 45 then
+                return v
+            end
+        end
+    end
+end
+
+local added
+function getanumber()
+    added = 0
+    for i,v in pairs(game.Workspace.Map.Blocks:GetChildren()) do
+        local target = getclosebed()
+        if target ~= nil and v.Position then
+            if target.Position.X == v.Position.X and target.Position.Z == v.Position.Z then
+                if v.Position.Y > target.Position.Y and v.Position.Y - target.Position.Y < 16.5 then
+                    added = added + 1
+                end
+                if v.Position.Y < target.Position.Y and v.Position.Y - target.Position.Y < 16.5 then
+                    added = added - 1
+                end
+            end
+        end
+    end
+    return added
+end
+
+function hitblock(X,Y,Z)
+    local args = {
+        [1] = {
+            ["blockRef"] = {
+                ["blockPosition"] = Vector3.new(X/3,Y/3,Z/3)
+            },
+            ["hitPosition"] = Vector3.new(X/3,Y/3,Z/3),
+            ["hitNormal"] = Vector3.new(X/3,Y/3,Z/3)
+        }
+    }
+
+    game:GetService("ReplicatedStorage").rbxts_include.node_modules.net.out._NetManaged.DamageBlock:InvokeServer(unpack(args))
+end
+
+local function getItem(itemName)
+	for i5, v5 in pairs(getinv(lplr)["items"]) do
+		if v5["itemType"] == itemName then
+			return v5, i5
+		end
+	end
+	return nil
+end
+    else
+        print("Toggle Off")
+    end
+end)
+
+--auto report
+
+Tab7Section:NewToggle("auto report", "report player", function(state)
+    if state then
+        setfflag("AbuseReportScreenshotPercentage", 0)
+setfflag("DFFlagAbuseReportScreenshot", "False") 
+
+local Default = {
+	Advertise = true;
+	Safe = false;
+	Webhook = "";
+	
+	Words = {
+	    Blacklist = "https://raw.githubusercontent.com/CF-Trail/Auto-Report/main/words/blacklisted.lua";
+	    Whitelist = "https://raw.githubusercontent.com/CF-Trail/Auto-Report/main/words/whitelisted.lua";
+	};
+}
+
+if not getgenv().autoreport then
+	getgenv().autoreport = Default
+end;
+
+for _,v in next, Default do
+	if not getgenv().autoreport[_] then getgenv().autoreport[_] = v end
+end
+
+if (getgenv()).autoreport.library == nil then
+	(getgenv()).autoreport.library = (loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/main/source")))();
+end;
+
+local messages = {
+	blacklisted = loadstring(game:HttpGet(getgenv().autoreport.Words.Blacklist))(),
+	whitelisted = loadstring(game:HttpGet(getgenv().autoreport.Words.Whitelist))()
+}
+
+local lib = {};
+local success, error = pcall(function()
+	function lib:notify(title, text)
+		(getgenv()).autoreport.library:MakeNotification({
+			Name = title,
+			Content = text,
+			Time = 3
+		});
+	end;
+	function lib:report(player, thing, reason, offensive)
+
+		for word, _ in next, messages.whitelisted do
+			if string.match(getgenv().autoreport.Message, word) then
+				return false;
+			end;
+		end;
+		if (getgenv()).autoreport.Webhook == "" or (getgenv()).autoreport.Webhook == nil then
+			lib:notify("Report", "Reported " .. player.Name .. " because of \"" .. (getgenv()).autoreport.Message .. "\"");
+		else
+				local data = 
+				{
+					["embeds"] = {{
+						["title"] = "**" .. gameName .. "**",
+						["description"] = "Auto-reported a player",
+						["type"] = "rich",
+						["color"] = tonumber(0x00aff4),
+						["url"] = "https://www.roblox.com/games/" .. game.PlaceId,
+						["fields"] = {
+							{
+								["name"] = "Name",
+								["value"] = "[" .. player.Name .. "](https://www.roblox.com/users/" .. player.UserId .. ")",
+								["inline"] = true
+							},
+							{
+								["name"] = "Message",
+								["value"] = getgenv().autoreport.Message,
+								["inline"] = true
+							},
+							{
+								["name"] = "Offensive part",
+								["value"] = offensive,
+								["inline"] = true
+							}
+						},
+						["footer"] = {
+							["text"] = "\nIf you think this is a mistake, contact snnwer#1349 or .gg#1780"
+						},
+						["author"] = {
+							["name"] = "Auto Report"
+						}
+					}}
+				}
+			local newdata = (game:GetService("HttpService")):JSONEncode(data);
+			local headers = {
+				["content-type"] = "application/json"
+			};
+			request = http_request or request or HttpPost or syn.request;
+			local abcdef = {
+				Url = (getgenv()).autoreport.Webhook,
+				Body = newdata,
+				Method = "POST",
+				Headers = headers
+			};
+			request(abcdef);
+		end;
+
+		for i = 1, (getgenv().autoreport.Safe and math.random(1,2) or math.random(5, 12)) do
+			wait(math.random(1, 15) / 10)
+			game.Players:ReportAbuse(player, thing, reason)
+		end;
+	end;
+
+	function handler(player, msg)
+		local thing, reason;
+		msg = string.lower(msg);
+		for i, v in next, messages.blacklisted do
+			if string.match(msg, i) then
+				thing, reason, offensive = v[1], v[2], i;
+				if (getgenv()).autoreport.Advertise == true then (game:GetService("ReplicatedStorage")).DefaultChatSystemChatEvents.SayMessageRequest:FireServer("/w " .. player.Name .. " you got mass reported by .gg/outliershub", "All"); end;
+			end;
+		end;
+		if thing and reason and offensive then
+			lib:report(player, thing, reason, offensive);
+		end;
+	end;
+end);
+
+if not success then
+	error(error);
+end;
+
+for i, plr in pairs(game.Players:GetPlayers()) do
+	if plr ~= game.Players.LocalPlayer then
+		plr.Chatted:Connect(function(msg)
+			(getgenv()).autoreport.Message = msg;
+			handler(plr, msg);
+		end);
+	end;
+end;
+game.Players.PlayerAdded:Connect(function(plr)
+	if plr ~= game.Players.LocalPlayer then
+		plr.Chatted:Connect(function(msg)
+			(getgenv()).autoreport.Message = msg;
+			handler(plr, msg);
+		end);
+	end;
+end);
+
+(getgenv()).autoreport.library:MakeNotification({
+	Name = "auto report load!",
+	Content = "credits to nobody",
+	Time = 8
+});
+
+(getgenv()).autoreport.library:MakeNotification({
+	Name = "idk",
+	Content = "credits to nobody",
+	Time = 8
+});
+    else
+        print("Toggle Off")
+    end
+end)
+
