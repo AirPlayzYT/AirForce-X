@@ -105,9 +105,13 @@ local Taunts = { --add as many as you wish
 
 "Air on top",
 
-"Roblox bed worse never improved their anti cheat",
+"Roblox bedwars never improved their anti cheat",
 
 "Join are DC for more",
+
+"Ahh ahh your mom goes so hard",
+
+"I know where you live hehe",
 
 }
 
@@ -267,8 +271,6 @@ Tab1Section:NewSlider("Sound 1-0", "Adjust killaura sound", 1, 0, function(val)
 
 end)
 
---bednuker
-
 Tab1Section:NewToggle("BedNuker", "Auto break bed and covers", function(state) 
          if state then 
                  BindToStepped("BedNuker", 1, function() 
@@ -321,6 +323,8 @@ Tab2Section:NewButton("Keyboard", "Opens Keyboard", function()
 loadstring(game:HttpGet("https://pastebin.com/raw/kC3dAMvt"))()
 end)
 
+--infinite jumps
+
 Tab2Section:NewButton("Inf Jumps", "Loads My Old Script", function()
 local InfiniteJumpEnabled = true
 game:GetService("UserInputService").JumpRequest:connect(function()
@@ -329,8 +333,6 @@ game:GetService("UserInputService").JumpRequest:connect(function()
 	end
 end)
 end)
-
---velocity
 
 Tab1Section:NewToggle("Velocity", "Prevents taking a knockback", function(state) 
          if state then 
@@ -342,8 +344,6 @@ Tab1Section:NewToggle("Velocity", "Prevents taking a knockback", function(state)
          end 
  end) 
 
- --reach
- 
  Tab1Section:NewToggle("Reach", "Extend your attack range", function(state) 
          if state then 
                  CombatConstant.RAYCAST_SWORD_CHARACTER_DISTANCE = (reachval["Value"] - 0.0001) 
@@ -355,8 +355,6 @@ Tab1Section:NewToggle("Velocity", "Prevents taking a knockback", function(state)
 Tab1Section:NewSlider("Range 18-1", "", 18, 1, function(val) -- 500 (MaxValue) | 0 (MinValue) 
          reachval["Value"] = val 
  end) 
- 
- --anti void
  
  Tab5Section:NewToggle("AntiVoid", "Give's you a second chance to get back on land", function(state) 
          if state then 
@@ -676,7 +674,7 @@ Tab2Section:NewButton("Inf Yield", "Loads Inf Yield", function()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
 end)
 
-Tab2Section:NewButton("Rekt Sky", "Loads Rekt Sky", function()
+Tab2Section:NewButton("Rekt Sky", "Loads Rekt Sky", function()ÿ
 loadstring(game:HttpGet('https://raw.githubusercontent.com/joeengo/Future/main/loadstring.lua', true))()
 end)
 
@@ -688,16 +686,133 @@ Tab2Section:NewButton("Rejoin", "Rejoins The Game", function()
 loadstring(game:HttpGet("https://pastebin.com/raw/1gtVMUz3"))()
 end)
 
-Tab6Section:NewButton("Credits", "Credits", function()
-game.StarterGui:SetCore("SendNotification", {
-    Title = "Bedwars is sus";
-    Text = "Made by Air"; -- what the text says (ofc)
-    Duration = 30;
-})
-wait(1)
-game.StarterGui:SetCore("SendNotification", {
-    Title = "Enjoy";
-    Text = "Don't Forget to Subscribe to A1rPl4yz"; -- what the text says (ofc)
-    Duration = 30;
-})
+ 
+Tab5Section:NewButton("FixCam", "fix camera bug on mobile", function()
+
+	cam.CameraType = Enum.CameraType.Fixed
+
+	cam.CameraType = Enum.CameraType.Custom
+
+end)
+			
+--bednuker
+
+Tab1Section:NewToggle("BedNuker", "Auto break bed and covers", function(state) 
+         if state then 
+                 BindToStepped("BedNuker", 1, function() 
+                         nuker() 
+                 end) 
+         else 
+                 UnbindFromStepped("BedNuker") 
+         end 
+ end) 
+ 
+--cape
+
+Tab4Section:NewButton("Cape", "Opens Cape", function()
+
+local player = game:GetService("Players")
+
+local lplr = player.LocalPlayer
+
+if lplr.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
+
+      if lplr.Character:FindFirstChild("Torso") then
+
+        torso = lplr.Character.Torso
+
+      else
+
+        torso = lplr.Character.UpperTorso
+
+      end
+
+      local CapeP = Instance.new("Part", torso.Parent)
+
+      CapeP.Name = "Cape"
+
+      CapeP.Anchored = false
+
+      CapeP.CanCollide = false
+
+      CapeP.TopSurface = 0
+
+      CapeP.BottomSurface = 0
+
+      CapeP.Color = Color3.fromRGB(0,0,0)
+
+      CapeP.FormFactor = "Custom"
+
+      CapeP.Size = Vector3.new(0.2,0.2,0.2)
+
+      local decal = Instance.new("Decal", CapeP)
+
+      decal.Texture = "http://www.roblox.com/asset/?id=9608953346"
+
+      decal.Face = "Back"
+
+      local msh = Instance.new("BlockMesh", CapeP)
+
+      msh.Scale = Vector3.new(9,17.5,0.5)
+
+      local motor = Instance.new("Motor", CapeP)
+
+      motor.Part0 = CapeP
+
+      motor.Part1 = torso
+
+      motor.MaxVelocity = 0.01
+
+      motor.C0 = CFrame.new(0,1.75,0) * CFrame.Angles(0,math.rad(90),0)
+
+      motor.C1 = CFrame.new(0,1,0.45) * CFrame.Angles(0,math.rad(90),0)
+
+      local wave = false
+
+      repeat wait(1/44)
+
+        decal.Transparency = torso.Transparency
+
+        local ang = 0.1
+
+        local oldmag = torso.Velocity.magnitude
+
+        local mv = 0.002
+
+        if wave then
+
+          ang = ang + ((torso.Velocity.magnitude/10) * 0.05) + 0.05
+
+          wave = false
+
+        else
+
+          wave = true
+
+        end
+
+        ang = ang + math.min(torso.Velocity.magnitude/11, 0.5)
+
+        motor.MaxVelocity = math.min((torso.Velocity.magnitude/111), 0.04) + mv
+
+        motor.DesiredAngle = -ang
+
+        if motor.CurrentAngle < -0.2 and motor.DesiredAngle > -0.2 then
+
+          motor.MaxVelocity = 0.04
+
+        end
+
+        repeat wait() until motor.CurrentAngle == motor.DesiredAngle or math.abs(torso.Velocity.magnitude - oldmag) >= (torso.Velocity.magnitude/10) + 1
+
+        if torso.Velocity.magnitude < 0.1 then
+
+          wait(0.1)
+
+        end
+
+      until not CapeP or CapeP.Parent ~= torso.Parent
+
+    end
+
 end)
