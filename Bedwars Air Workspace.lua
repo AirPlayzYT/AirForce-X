@@ -9,14 +9,17 @@ local Tab1Section = Tab1:NewSection("Main")
 local Tab2 = Window:NewTab("Other Scripts")
 local Tab2Section = Tab2:NewSection("Other")
 
-local Tab3 = Window:NewTab("AutoToxic [you can't turn off after enabled]")
+local Tab3 = Window:NewTab("AutoToxic you can't turn off after enabled")
 local Tab3Section = Tab3:NewSection("AutoToxic")
 
 local Tab4 = Window:NewTab("Animations")
 local Tab4Section = Tab4:NewSection("Animations")
 
-local Tab5 = Window:NewTab("Credits")
-local Tab5Section = Tab3:NewSection("Credits")
+local Tab5 = Window:NewTab("Misc")
+local Tab5Section = Tab5:NewSection("Misc")
+
+local Tab6 = Window:NewTab("Credits")
+local Tab6Section = Tab3:NewSection("Credits")
 
 -- Buttons
 
@@ -318,7 +321,7 @@ Tab2Section:NewButton("Keyboard", "Opens Keyboard", function()
 loadstring(game:HttpGet("https://pastebin.com/raw/kC3dAMvt"))()
 end)
 
-Tab1Section:NewButton("Inf Jumps", "Loads My Old Script", function()
+Tab2Section:NewButton("Inf Jumps", "Loads My Old Script", function()
 local InfiniteJumpEnabled = true
 game:GetService("UserInputService").JumpRequest:connect(function()
 	if InfiniteJumpEnabled then
@@ -355,7 +358,7 @@ Tab1Section:NewSlider("Range 18-1", "", 18, 1, function(val) -- 500 (MaxValue) |
  
  --anti void
  
- Tab6Section:NewToggle("AntiVoid", "Give's you a second chance to get back on land", function(state) 
+ Tab5Section:NewToggle("AntiVoid", "Give's you a second chance to get back on land", function(state) 
          if state then 
                  antivoidp = Instance.new("Part", workspace) 
                  antivoidp.Name = "AntiVoid" 
@@ -383,22 +386,22 @@ Tab1Section:NewSlider("Range 18-1", "", 18, 1, function(val) -- 500 (MaxValue) |
          end 
  end) 
   
- Tab6Section:NewColorPicker("Color", "Adjust antivoid color", Color3.fromHSV(antivoidcolor["Hue"], antivoidcolor["Sat"], antivoidcolor["Value"]), function(val) 
+ Tab5Section:NewColorPicker("Color", "Adjust antivoid color", Color3.fromHSV(antivoidcolor["Hue"], antivoidcolor["Sat"], antivoidcolor["Value"]), function(val) 
          if antivoidp then 
                  antivoidp.Color = (val) 
          end 
  end) 
   
- Tab6Section:NewSlider("Invisible 1-100", "Adjust antivoid transparency", 100, 0, function(val) 
+ Tab5Section:NewSlider("Invisible 1-100", "Adjust antivoid transparency", 100, 0, function(val) 
          if antivoidp then 
                  antivoidp.Transparency = 1 - (val / 100) 
          end 
  end) 
 
-Tab6Section:NewTextBox("Set FOV","Max FOV number 120", function(txt) game.Workspace.CurrentCamera.FieldOfView = txt
+Tab5Section:NewTextBox("Set FOV","Max FOV number 120", function(txt) game.Workspace.CurrentCamera.FieldOfView = txt
 end)
 
-Tab6Section:NewToggle("ESP", "ToggleInfo", function(state)
+Tab5Section:NewToggle("ESP", "ToggleInfo", function(state)
     if state then
         local lplr = game.Players.LocalPlayer
 local camera = game:GetService("Workspace").CurrentCamera
@@ -588,7 +591,7 @@ end)
     end
 end)
 
-Tab6Section:NewToggle("Tracers", "Lines", function(state)
+Tab5Section:NewToggle("Tracers", "Lines", function(state)
     if state then
         local lplr = game.Players.LocalPlayer
 local camera = game:GetService("Workspace").CurrentCamera
