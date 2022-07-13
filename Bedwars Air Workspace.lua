@@ -690,7 +690,7 @@ end)
 
 Tab6Section:NewButton("Credits", "Credits", function()
 game.StarterGui:SetCore("SendNotification", {
-    Title = "Bedwars OP";
+    Title = "Bedwars is sus";
     Text = "Made by Air"; -- what the text says (ofc)
     Duration = 30;
 })
