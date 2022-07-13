@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
-local Window = Library.CreateLib("Bedwars AirForce-X V4 Beta (Release comes on 7/12/22 or 7/13/22)", "BloodTheme")
+local Window = Library.CreateLib("Bedwars AirForce-X V4 Beta Release comes on 7/12/22 or 7/13/22", "BloodTheme")
 
 -- Tab
 
@@ -688,7 +688,7 @@ Tab2Section:NewButton("Rejoin", "Rejoins The Game", function()
 loadstring(game:HttpGet("https://pastebin.com/raw/1gtVMUz3"))()
 end)
 
-Tab5Section:NewButton("Credits", "Credits", function()
+Tab6Section:NewButton("Credits", "Credits", function()
 game.StarterGui:SetCore("SendNotification", {
     Title = "Bedwars OP";
     Text = "Made by Air"; -- what the text says (ofc)
