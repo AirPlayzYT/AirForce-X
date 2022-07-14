@@ -4,12 +4,12 @@ local AirWaterMark = Instance.new("ScreenGui")
  local UITextSizeConstraint = Instance.new("UITextSizeConstraint") 
   
  AirWaterMark.Name = "AirWaterMark"
- NeonWaterMark.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui") 
- NeonWaterMark.ZIndexBehavior = Enum.ZIndexBehavior.Sibling 
- NeonWaterMark.ResetOnSpawn = false 
+ AirWaterMark.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui") 
+ AirWaterMark.ZIndexBehavior = Enum.ZIndexBehavior.Sibling 
+ AirWaterMark.ResetOnSpawn = false 
   
  TextLabel.Parent = AirWaterMark 
- TextLabel.BackgroundColor3 = Color3.fromRGB(255, 0, 0) 
+ TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0) 
  TextLabel.BackgroundTransparency = 1.000 
  TextLabel.BorderSizePixel = 0 
  TextLabel.Position = UDim2.new(-0.000772226602, 0, 0.0343558267, 0) 
