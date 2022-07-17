@@ -1,1 +1,0 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/AirPlayzYT/Yes/main/Air%20Script%20Hub%20Workspace.lua", true))()
