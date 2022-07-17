@@ -1,1 +1,3 @@
+--look inside script to put key for Air Hub--
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/AirPlayzYT/AirForce-X/main/Air%20Script%20Hub%20Remastered%20Workspace.lua", true))()
