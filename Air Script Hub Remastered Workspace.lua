@@ -23,7 +23,7 @@ shared.key = "79ddc587ee8eae6a7d3044e972b3389c"
  
 KeyLink = "https://rekonise.com/air-hub-key-v1-d6sr7"
  
-loadstring(game:HttpGet("https://controlc.com/a61cbeb12", true))()
+loadstring(game:HttpGet("https://controlc.com/6bf7c12b", true))()
  
 --------------------------------------------------------------------------------------------------------
  
