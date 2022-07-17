@@ -1,22 +1,33 @@
-local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wall%20v3')))()
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/zxciaz/VenyxUI/main/Reuploaded"))() --someone reuploaded it so I put it in place of the original back up so guy can get free credit.
+local venyx = library.new("Air Script Hub V1 Remastered", 5013109572)
 
-local w = library:CreateWindow("Air Script Hub") -- Creates the window
+-- themes
+local themes = {
+Background = Color3.fromRGB(255, 0, 0),
+Glow = Color3.fromRGB(0, 0, 0),
+Accent = Color3.fromRGB(10, 10, 10),
+LightContrast = Color3.fromRGB(20, 20, 20),
+DarkContrast = Color3.fromRGB(14, 14, 14),  
+TextColor = Color3.fromRGB(255, 255, 255)
+}
 
-local b = w:CreateFolder("Scripts") -- Creates the folder(U will put here your buttons,etc)
+-- first page
+local page = venyx:addPage("Air Hub", 5012544693)
+local section1 = page:addSection("Air Hub")
+local section2 = page:addSection("Air Hub Key at https://rekonise.com/air-hub-key-v1-d6sr7")
 
-b:Label("AirForce-X",{
-    TextSize = 25; -- Self Explaining
-    TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
-    BgColor = Color3.fromRGB(69,69,69); -- Self Explaining
-    
-}) 
-
-b:Button("Bedwars Air", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/AirPlayzYT/AirForce-X/main/Sunlight%20Workspace.lua", true))()
+section1:addButton("Button", function()
+----------- | SCRIPT PUT THE KEY HERE | ----------------------------------------------------------------------
+ 
+shared.key = "79ddc587ee8eae6a7d3044e972b3389c" 
+ 
+KeyLink = "https://rekonise.com/air-hub-key-v1-d6sr7"
+ 
+loadstring(game:HttpGet("https://controlc.com/a61cbeb12", true))()
+ 
+--------------------------------------------------------------------------------------------------------
+ 
 end)
 
-b:Button("Bedwars Sunlight", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/AirPlayzYT/AirForce-X/main/Sunlight%20Workspace.lua", true))()
-end)
-
-b:DestroyGui()
+-- load
+venyx:SelectPage(venyx.pages[1], true) -- no default for more freedom
