@@ -16,17 +16,8 @@ local page = venyx:addPage("Air Hub", 5012544693)
 local section1 = page:addSection("Air Hub")
 local section2 = page:addSection("Air Hub Key at https://rekonise.com/air-hub-key-v1-d6sr7")
 
-section1:addButton("Button", function()
------------ | SCRIPT PUT THE KEY HERE | ----------------------------------------------------------------------
- 
-shared.key = "79ddc587ee8eae6a7d3044e972b3389c" 
- 
-KeyLink = "https://rekonise.com/air-hub-key-v1-d6sr7"
- 
-loadstring(game:HttpGet("https://controlc.com/6bf7c12b", true))()
- 
---------------------------------------------------------------------------------------------------------
- 
+section1:addButton("Air Hub", function()
+loadstring(game:HttpGet("https://pst.klgrth.io/paste/cmker/raw", true))()
 end)
 
 -- load
