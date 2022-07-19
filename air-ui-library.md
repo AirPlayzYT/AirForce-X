@@ -1,6 +1,6 @@
 ---
 description: Documentation
-cover: http://www.roblox.com/asset/?id=9608953346
+cover: https://www.roblox.com/asset/?id=9608953346
 coverY: 0
 ---
 
