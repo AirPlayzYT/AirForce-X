@@ -18,8 +18,8 @@ function Library:Create(hubname, gamename, presetColor)
 	local Gamename = Instance.new("TextLabel")
 	local Pages = Instance.new("Folder")
 	
-	AirHub.Name = "AirHub"
-	AirHub.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+	Hub.Name = "Hub"
+	Hub.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
 	MainFrame.Name = "MainFrame"
 	MainFrame.Parent = Hub
@@ -59,20 +59,20 @@ function Library:Create(hubname, gamename, presetColor)
 	CloseButton.Size = UDim2.new(0, 25, 0, 25)
 	CloseButton.Image = "rbxassetid://6236220207"
 
-	AirHubname.Name = "AirHubname"
-	AirHubname.Parent = MainFrame
-	AirHubname.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	AirHubname.BackgroundTransparency = 1.000
-	AirHubname.BorderSizePixel = 0
-	AirHubname.Position = UDim2.new(0.015673982, 0, 0, 0)
-	AirHubname.Size = UDim2.new(0, 255, 0, 32)
-	AirHubname.Font = Enum.Font.SourceSansLight
-	AirHubname.Text = hubname or "Hub-name"
-	AirHubname.TextColor3 = Color3.fromRGB(255, 255, 255)
-	AirHubname.TextSize = 28.000
-	AirHubname.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-	AirHubname.TextStrokeTransparency = 0.740
-	AirHubname.TextXAlignment = Enum.TextXAlignment.Left
+	Hubname.Name = "Hubname"
+	Hubname.Parent = MainFrame
+	Hubname.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Hubname.BackgroundTransparency = 1.000
+	Hubname.BorderSizePixel = 0
+	Hubname.Position = UDim2.new(0.015673982, 0, 0, 0)
+	Hubname.Size = UDim2.new(0, 255, 0, 32)
+	Hubname.Font = Enum.Font.SourceSansLight
+	Hubname.Text = hubname or "Hub-name"
+	Hubname.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Hubname.TextSize = 28.000
+	Hubname.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+	Hubname.TextStrokeTransparency = 0.740
+	Hubname.TextXAlignment = Enum.TextXAlignment.Left
 
 	Gamename.Name = "Gamename"
 	Gamename.Parent = MainFrame
