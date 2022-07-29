@@ -1,9 +1,9 @@
--- Black Hole Xis made by: A1rPl4yz (YT)
+-- Black Hole X is made by: A1rPl4yz (YT)
 -- Thanks for executing for Black Hole X, You can use this basic hack gui for any game! (But there are a games with anti-hack)
 
 
 print("Black Hole X is sucsesfully loaded!")   -- Only you can see in the output this Text!
-print("Back Hole X is made by: A1rPl4y on YT") -- Only you can see in the output this Text!
+print("Back Hole X is made by: A1rPl4yz on YT") -- Only you can see in the output this Text!
 
 
 -- Instances:
