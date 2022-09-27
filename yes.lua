@@ -45,7 +45,7 @@ local AirWaterMark = Instance.new("ScreenGui")
     ElementColor = Color3.fromRGB(20, 20, 20)
 }
 local Window = Library.CreateLib("Clicking Village", colors)
-local Version = "0.0.2"
+local Version = "0.0.3"
 
 local InfoTab = Window:NewTab("Info")
 local InfoSection = InfoTab:NewSection("Info")
