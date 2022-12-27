@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AirPlayzYT/AirForce-X/main/Doors%20Chaos%20Mode%20Source.lua", true))()
