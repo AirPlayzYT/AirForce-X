@@ -7,3 +7,15 @@ local Section = Tab:NewSection("Exotic")
 Section:NewButton("Exotic", "Ripper but bad", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/xcLyFhnq"))()  
 end)
+
+Section:NewKeybind("Exotic", "Ripper but bad", Enum.KeyCode.E, function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/xcLyFhnq"))()
+end)
+
+
+local Tab = Window:NewTab("Toggle UI")
+local Section = Tab:NewSection("Toggle UI")
+
+Section:NewKeybind("Toggle UI", "Toggles UI", Enum.KeyCode.RightShift, function()
+	Library:ToggleUI()
+end)
